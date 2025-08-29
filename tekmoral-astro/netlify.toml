@@ -1,0 +1,28 @@
+# Netlify configuration for high-performance Astro site
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirects & URL rules
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Caching headers
+# Hashed assets: cache for 1 year, immutable
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+# HTML: short cache for fast updates
+[[headers]]
+  for = "/*"
+  [headers.values]
+    cache-control = "public, max-age=60"
+    x-frame-options = "SAMEORIGIN"
+    x-content-type-options = "nosniff"
+    referrer-policy = "strict-origin-when-cross-origin"
+    permissions-policy = "geolocation=(), microphone=(), camera=()"

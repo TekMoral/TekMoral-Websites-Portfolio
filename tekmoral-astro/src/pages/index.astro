@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-900/30 via-sky-600/10 to-slate-950"></div>
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2 text-sky-300/90 text-xs uppercase tracking-wider">
+          <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+          TekMoral
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
+          We Build AI‑Ready Websites and Apps that Grow Your Business
+        </h1>
+        <p class="text-slate-300/90 max-w-2xl">
+          We design high-converting websites, custom web applications, and AI solutions for SMEs,
+          schools, and startups. Deployed fast, optimized for performance, and built to scale.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="/book-a-call" class="px-5 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold">
+            Send a Message
+          </a>
+          <a href="#services" class="px-5 py-3 rounded-lg border border-slate-700 hover:border-slate-500">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="max-w-6xl mx-auto px-6 py-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-[1.01] motion-reduce:transform-none after:absolute after:inset-0 after:opacity-0 group-hover:after:opacity-100 after:transition after:bg-[radial-gradient(400px_120px_at_20%_-20%,rgba(56,189,248,0.20),transparent_60%)]">
+      <h3 class="text-xl font-semibold mb-2 text-slate-50">Business Websites & Branding</h3>
+      <p class="text-slate-300/80">Professional sites, landing pages, and brand systems optimized for conversion. Optional AI chatbots to engage visitors.</p>
+    </article>
+    <article class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-[1.01] motion-reduce:transform-none after:absolute after:inset-0 after:opacity-0 group-hover:after:opacity-100 after:transition after:bg-[radial-gradient(400px_120px_at_20%_-20%,rgba(56,189,248,0.20),transparent_60%)]">
+      <h3 class="text-xl font-semibold mb-2 text-slate-50">Custom Web Applications</h3>
+      <p class="text-slate-300/80">Management systems, portals with authentication, dashboards, and AI automation for reporting and insights.</p>
+    </article>
+    <article class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-[1.01] motion-reduce:transform-none after:absolute after:inset-0 after:opacity-0 group-hover:after:opacity-100 after:transition after:bg-[radial-gradient(400px_120px_at_20%_-20%,rgba(56,189,248,0.20),transparent_60%)]">
+      <h3 class="text-xl font-semibold mb-2 text-slate-50">Tech Consulting & Training</h3>
+      <p class="text-slate-300/80">Digital transformation guidance, web/cloud training, and introductory AI/ML programs for teams and schools.</p>
+    </article>
+    <article class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-[1.01] motion-reduce:transform-none after:absolute after:inset-0 after:opacity-0 group-hover:after:opacity-100 after:transition after:bg-[radial-gradient(400px_120px_at_20%_-20%,rgba(56,189,248,0.20),transparent_60%)]">
+      <h3 class="text-xl font-semibold mb-2 text-slate-50">AI & Machine Learning</h3>
+      <p class="text-slate-300/80">Predictive analytics, chat/assistants, and models tailored to business goals, including trading insights.</p>
+    </article>
+    <article class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300 ease-out transform-gpu hover:-translate-y-1 hover:scale-[1.01] motion-reduce:transform-none after:absolute after:inset-0 after:opacity-0 group-hover:after:opacity-100 after:transition after:bg-[radial-gradient(400px_120px_at_20%_-20%,rgba(56,189,248,0.20),transparent_60%)] sm:col-span-2">
+      <h3 class="text-xl font-semibold mb-2 text-slate-50">School Solutions</h3>
+      <p class="text-slate-300/80">Smart school portals with digital records & analytics, plus affordable static quiz/practice platforms optimized for mobile.</p>
+    </article>
+  </section>
+</Layout>

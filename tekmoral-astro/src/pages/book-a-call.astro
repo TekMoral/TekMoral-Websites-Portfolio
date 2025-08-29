@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+const submitted = Astro.url.searchParams.get('submitted') === '1';
+---
+<Layout title="Book a Free Strategy Call — TekMoral" description="Pick a time or leave your details and we’ll confirm a call.">
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h1 class="text-3xl md:text-4xl font-semibold mb-3">Book a Free Strategy Call</h1>
+    <p class="text-slate-300/90 mb-8">Leave your details. We’ll reach out via WhatsApp within 24–48 hours.</p>
+
+    {submitted && (
+      <div class="mb-6 rounded-lg border border-emerald-700/50 bg-emerald-900/30 px-4 py-3 text-emerald-200">
+        Thanks! Your request was received. We’ll get back to you shortly.
+      </div>
+    )}
+
+    <div class="grid gap-6 md:grid-cols-5">
+      <div class="md:col-span-3">
+        <form name="book-a-call" class="grid gap-4">
+          <div class="grid gap-4">
+            <label class="grid gap-2">
+              <span class="text-sm text-slate-300/80">Name</span>
+              <input class="rounded-md bg-slate-900/50 border border-slate-700 px-3 py-2" name="name" required />
+            </label>
+          </div>
+          <div class="grid gap-4">
+            <label class="grid gap-2">
+              <span class="text-sm text-slate-300/80">Project type</span>
+              <select class="rounded-md bg-slate-900/50 border border-slate-700 px-3 py-2" name="project_type" required>
+                <option value="" disabled selected>Select</option>
+                <option>Website & Branding</option>
+                <option>Custom Web App</option>
+                <option>AI/ML Solution</option>
+                <option>Consulting & Training</option>
+                <option>School Solutions</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label class="grid gap-2">
+            <span class="text-sm text-slate-300/80">Message</span>
+            <textarea class="rounded-md bg-slate-900/50 border border-slate-700 px-3 py-2" name="message" rows="5" placeholder="Goals, current status, timelines"></textarea>
+          </label>
+          <button id="send-whatsapp" class="px-5 py-3 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-semibold w-fit" type="button">Send via WhatsApp</button>
+        </form>
+        <p class="text-slate-400 text-sm mt-2">WhatsApp will open with your details pre‑filled.</p>
+        <script is:inline>
+          const form = document.querySelector('form[name="book-a-call"]');
+          const btn = document.getElementById('send-whatsapp');
+          const BUSINESS_NUMBER = '2348163468669'; // Nigeria E.164 without '+', used by wa.me
+          btn?.addEventListener('click', () => {
+            if (!form) return;
+            const name = form.querySelector('input[name="name"]').value.trim();
+            const project = form.querySelector('select[name="project_type"]').value;
+            const message = form.querySelector('textarea[name="message"]').value.trim();
+            if (!name || !project) {
+              alert('Please fill Name and Project type.');
+              return;
+            }
+            const raw = `New booking request\nName: ${name}\nProject: ${project}\nMessage: ${message || '-'}`;
+            const text = encodeURIComponent(raw);
+            const url = `https://wa.me/${BUSINESS_NUMBER}?text=${text}`;
+            window.location.href = url;
+          });
+        </script>
+      </div>
+      <aside class="md:col-span-2 space-y-4">
+                <div class="rounded-lg border border-slate-800/60 bg-slate-900/30 p-4">
+          <h2 class="font-semibold mb-2">What to expect</h2>
+          <ul class="list-disc list-inside text-slate-300/80 space-y-1">
+            <li>15–30 min intro call</li>
+            <li>Clarify goals and success metrics</li>
+            <li>Next steps and timeline</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>

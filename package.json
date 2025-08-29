@@ -1,0 +1,12 @@
+{
+  "name": "tekmoral-website",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm --prefix ./tekmoral-astro run dev",
+    "build": "npm --prefix ./tekmoral-astro run build",
+    "preview": "npm --prefix ./tekmoral-astro run preview",
+    "astro": "npm --prefix ./tekmoral-astro run astro",
+    "install:site": "npm --prefix ./tekmoral-astro install"
+  }
+}
