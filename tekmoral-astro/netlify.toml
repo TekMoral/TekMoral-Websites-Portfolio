@@ -11,15 +11,26 @@
   force = true
 
 # Caching headers
-# Hashed assets: cache for 1 year, immutable
+# Hashed assets and static files: cache for 1 year, immutable
 [[headers]]
   for = "/assets/*"
   [headers.values]
     cache-control = "public, max-age=31536000, immutable"
 
+# Common text/XML files: short CDN cache
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    cache-control = "public, max-age=600, s-maxage=31536000"
+
+[[headers]]
+  for = "/*.txt"
+  [headers.values]
+    cache-control = "public, max-age=600, s-maxage=31536000"
+
 # Astro hashed assets output
 [[headers]]
-  for = "/*_astro/*"
+  for = "/_astro/*"
   [headers.values]
     cache-control = "public, max-age=31536000, immutable"
 
@@ -30,7 +41,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    cache-control = "public, max-age=0, s-maxage=31536000, stale-while-revalidate=60"
+    cache-control = "public, max-age=600, s-maxage=31536000, stale-while-revalidate=60"
     x-frame-options = "SAMEORIGIN"
     x-content-type-options = "nosniff"
     referrer-policy = "strict-origin-when-cross-origin"
