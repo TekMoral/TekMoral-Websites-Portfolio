@@ -17,11 +17,20 @@
   [headers.values]
     cache-control = "public, max-age=31536000, immutable"
 
-# HTML: short cache for fast updates
+# Astro hashed assets output
+[[headers]]
+  for = "/*_astro/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+# HTML pages: cache at CDN aggressively, browsers revalidate quickly
+# - max-age=0 keeps browsers checking freshness
+# - s-maxage tells Netlify CDN to cache for a year
+# - stale-while-revalidate allows fast responses while refreshing in background
 [[headers]]
   for = "/*"
   [headers.values]
-    cache-control = "public, max-age=60"
+    cache-control = "public, max-age=0, s-maxage=31536000, stale-while-revalidate=60"
     x-frame-options = "SAMEORIGIN"
     x-content-type-options = "nosniff"
     referrer-policy = "strict-origin-when-cross-origin"
