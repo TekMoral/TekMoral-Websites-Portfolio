@@ -294,6 +294,13 @@ const path = Astro.url.pathname;
 			</div>
 		</div>
 	</footer>
+	<script is:inline>
+	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load', () => {
+	    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => {});
+	  });
+	}
+	</script>
 	</body>
 </html>
 
