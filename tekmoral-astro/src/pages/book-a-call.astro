@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 const submitted = Astro.url.searchParams.get('submitted') === '1';
 ---
-<Layout title="Book a Free Strategy Call — TekMoral" description="Pick a time or leave your details and we’ll confirm a call.">
+<Layout title="Book a Free Strategy Call — TekMoral" description="Pick a time or leave your details and we'll confirm a call.">
   <section class="max-w-4xl mx-auto px-6 py-16">
     <h1 class="text-3xl md:text-4xl font-semibold mb-3">Book a Free Strategy Call</h1>
-    <p class="text-slate-300/90 mb-8">Leave your details. We’ll reach out via WhatsApp within 24–48 hours.</p>
+    <p class="text-slate-300/90 mb-8">Leave your details. We'll reach out via WhatsApp within 24–48 hours.</p>
 
     {submitted && (
       <div class="mb-6 rounded-lg border border-emerald-700/50 bg-emerald-900/30 px-4 py-3 text-emerald-200">
-        Thanks! Your request was received. We’ll get back to you shortly.
+        Thanks! Your request was received. We'll get back to you shortly.
       </div>
     )}
 
@@ -43,23 +43,124 @@ const submitted = Astro.url.searchParams.get('submitted') === '1';
           <button id="send-whatsapp" class="px-5 py-3 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-semibold w-fit" type="button">Send via WhatsApp</button>
         </form>
         <p class="text-slate-400 text-sm mt-2">WhatsApp will open with your details pre‑filled.</p>
+        <div id="form-errors" class="text-red-400 text-sm mt-2 hidden" role="alert" aria-live="polite"></div>
+        <div id="whatsapp-helper" class="text-amber-300/90 text-sm mt-2 hidden"></div>
         <script is:inline>
           const form = document.querySelector('form[name="book-a-call"]');
           const btn = document.getElementById('send-whatsapp');
-          const BUSINESS_NUMBER = '2348163468669'; // Nigeria E.164 without '+', used by wa.me
-          btn?.addEventListener('click', () => {
-            if (!form) return;
-            const name = form.querySelector('input[name="name"]').value.trim();
-            const project = form.querySelector('select[name="project_type"]').value;
-            const message = form.querySelector('textarea[name="message"]').value.trim();
-            if (!name || !project) {
-              alert('Please fill Name and Project type.');
-              return;
+          const helper = document.getElementById('whatsapp-helper');
+          const errorDiv = document.getElementById('form-errors');
+
+          // Read centralized WhatsApp number from meta tag, fallback to known value
+          const metaNumber = document.querySelector('meta[name="whatsapp:number"]')?.getAttribute('content')?.trim();
+          const BUSINESS_NUMBER = (metaNumber && /^\d+$/.test(metaNumber)) ? metaNumber : '2348163468669';
+
+          function buildWhatsAppUrl(params) {
+            const search = new URLSearchParams(params);
+            return `https://api.whatsapp.com/send?${search.toString()}`;
+          }
+
+          function validateForm() {
+            if (!form) return { valid: false, errors: [] };
+            
+            const name = form.querySelector('input[name="name"]')?.value?.trim() || '';
+            const project = form.querySelector('select[name="project_type"]')?.value || '';
+            const message = form.querySelector('textarea[name="message"]')?.value?.trim() || '';
+
+            // Clear previous errors
+            if (errorDiv) {
+              errorDiv.classList.add('hidden');
+              errorDiv.innerHTML = '';
             }
-            const raw = `New booking request\nName: ${name}\nProject: ${project}\nMessage: ${message || '-'}`;
-            const text = encodeURIComponent(raw);
-            const url = `https://wa.me/${BUSINESS_NUMBER}?text=${text}`;
-            window.location.href = url;
+
+            // Validate required fields
+            const errors = [];
+            if (!name) errors.push('Name is required');
+            if (!project) errors.push('Project type is required');
+
+            if (errors.length > 0) {
+              if (errorDiv) {
+                errorDiv.innerHTML = `<ul class="list-disc list-inside">${errors.map(err => `<li>${err}</li>`).join('')}</ul>`;
+                errorDiv.classList.remove('hidden');
+                
+                // Focus the first empty required field
+                if (!name) {
+                  form.querySelector('input[name="name"]')?.focus();
+                } else if (!project) {
+                  form.querySelector('select[name="project_type"]')?.focus();
+                }
+              }
+              return { valid: false, errors };
+            }
+
+            return { valid: true, data: { name, project, message } };
+          }
+
+          function openWhatsApp(data) {
+            const raw = [
+              'New booking request',
+              `Name: ${data.name}`,
+              `Project: ${data.project}`,
+              `Message: ${data.message || '-'}`
+            ].join('\n');
+
+            const url = buildWhatsAppUrl({ phone: BUSINESS_NUMBER, text: raw });
+
+            // Clear form and helper
+            try { form.reset(); } catch {}
+            if (helper) { helper.classList.add('hidden'); helper.innerHTML = ''; }
+
+            // Open WhatsApp in new tab
+            const win = window.open(url, '_blank', 'noopener');
+            if (win && !win.closed) {
+              // Success - show confirmation state
+              setTimeout(() => {
+                const submittedUrl = new URL(window.location.href);
+                submittedUrl.searchParams.set('submitted', '1');
+                window.history.replaceState({}, '', submittedUrl.toString());
+              }, 300);
+            } else {
+              // Fallback if popup blocked
+              setTimeout(() => {
+                if (document.visibilityState === 'visible' && document.hasFocus()) {
+                  if (helper) {
+                    helper.innerHTML = `Couldn't open WhatsApp automatically. <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-emerald-300 underline">Open in new tab</a> or <a href="${url}" class="text-emerald-300 underline">open in this tab</a>. <button id="copy-wa" class="ml-2 underline">Copy link</button>`;
+                    helper.classList.remove('hidden');
+                    document.getElementById('copy-wa')?.addEventListener('click', async () => {
+                      try { await navigator.clipboard.writeText(url); helper.textContent = 'Link copied.'; } catch {}
+                    });
+                  }
+                }
+              }, 100);
+            }
+          }
+
+          function handleSubmit() {
+            const validation = validateForm();
+            if (!validation.valid) {
+              return; // Stop here if validation fails - no navigation will occur
+            }
+            openWhatsApp(validation.data);
+          }
+
+          // Submit path (Enter key)
+          form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleSubmit();
+          });
+
+          // Click on button
+          btn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            handleSubmit();
+          });
+
+          // Keyboard on button
+          btn?.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleSubmit();
+            }
           });
         </script>
       </div>

@@ -1,12 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
+<Layout 
+  title="Our Work — TekMoral" 
+  description="Case studies and project highlights from our web development, AI solutions, and digital transformation work across Lagos and Nigeria."
+  ogImage="https://www.tekmoral.com/og-work.png"
+>
   <section class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-3xl md:text-4xl font-semibold mb-6">Work</h1>
-    <div class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-700 p-8 shadow-md text-center">
-      <p class="text-slate-200 text-lg">Coming soon</p>
-      <p class="text-slate-400 mt-2">Case studies and project highlights from Lagos and across Nigeria will be published here.</p>
+    <h1 class="text-3xl md:text-4xl font-semibold mb-6">Our Work</h1>
+    <p class="text-slate-300/90 mb-10 max-w-3xl">We're building digital solutions across Lagos and Nigeria. Here's what we're working on.</p>
+    
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <!-- Project Placeholder 1 -->
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300">
+        <div class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-slate-50">E-commerce Platform</h3>
+        <p class="text-slate-300/80 mb-4">Custom online store with inventory management and payment integration for Lagos-based retailer.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-300">React</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-300">Node.js</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-300">Paystack</span>
+        </div>
+      </div>
+
+      <!-- Project Placeholder 2 -->
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-emerald-400/70 transition duration-300">
+        <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-slate-50">School Management System</h3>
+        <p class="text-slate-300/80 mb-4">Digital portal for student records, parent communication, and performance analytics for private school in Ikeja.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs rounded-full bg-emerald-500/20 text-emerald-300">Astro</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-emerald-500/20 text-emerald-300">PostgreSQL</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-emerald-500/20 text-emerald-300">PWA</span>
+        </div>
+      </div>
+
+      <!-- Project Placeholder 3 -->
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-purple-400/70 transition duration-300">
+        <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-slate-50">AI Sales Predictor</h3>
+        <p class="text-slate-300/80 mb-4">Machine learning model to forecast sales trends and optimize inventory for retail chain in Victoria Island.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-300">Python</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-300">TensorFlow</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-300">FastAPI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <div class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-700 p-8 shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-slate-50">More Case Studies Coming Soon</h2>
+        <p class="text-slate-300/90 mb-6">We're documenting our client success stories and will publish detailed case studies showcasing real results from our projects across Nigeria.</p>
+        <a href="/book-a-call" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold">
+          Discuss Your Project
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

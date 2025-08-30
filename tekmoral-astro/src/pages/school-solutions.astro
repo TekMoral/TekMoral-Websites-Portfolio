@@ -1,19 +1,301 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
+<Layout 
+  title="School Solutions — TekMoral" 
+  description="Smart school portals, digital records, analytics, and mobile-first quiz platforms designed for educational institutions. Affordable and optimized for low bandwidth."
+  ogImage="https://www.tekmoral.com/og-school-solutions.png"
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-900/30 via-sky-600/10 to-slate-950"></div>
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 text-emerald-300/90 text-xs uppercase tracking-wider mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+          </svg>
+          Education Technology
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
+          Transform Your School with Smart Digital Solutions
+        </h1>
+        <p class="text-slate-300/90 max-w-3xl mx-auto text-lg leading-relaxed mb-8">
+          Streamline operations, engage parents, and improve student outcomes with our affordable, 
+          mobile-first school management systems designed specifically for Nigerian educational institutions.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/book-a-call" class="px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold">
+            Schedule Demo
+          </a>
+          <a href="#solutions" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-slate-500">
+            View Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section -->
   <section class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-3xl md:text-4xl font-semibold mb-6">School Solutions</h1>
-    <p class="text-slate-300/90 mb-8 max-w-3xl">Smart portals, analytics, and affordable assessment platforms designed for low bandwidth and mobile devices.</p>
-    <div class="grid gap-6 sm:grid-cols-2">
-      <article class="rounded-xl border border-slate-800/80 bg-slate-900/30 p-6">
-        <h3 class="text-xl font-semibold mb-2">Smart School Portals</h3>
-        <p class="text-slate-300/80">Digital records, parent/student access, role-based dashboards, and insights.</p>
-      </article>
-      <article class="rounded-xl border border-slate-800/80 bg-slate-900/30 p-6">
-        <h3 class="text-xl font-semibold mb-2">Quiz/Practice Platforms</h3>
-        <p class="text-slate-300/80">Static, fast, and mobile-first practice sites for private schools.</p>
-      </article>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Challenges Facing Nigerian Schools Today</h2>
+      <p class="text-slate-300/90 max-w-3xl mx-auto text-lg">
+        Many schools struggle with outdated systems that create inefficiencies and limit growth potential.
+      </p>
+    </div>
+    
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/20 flex items-center justify-center">
+          <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-slate-50">Paper-Based Records</h3>
+        <p class="text-slate-300/80">Student files, grades, and attendance tracked manually, leading to errors, loss of data, and time-consuming processes.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center">
+          <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-slate-50">Poor Parent Communication</h3>
+        <p class="text-slate-300/80">Limited visibility into student progress, irregular updates, and difficulty reaching parents during emergencies.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-500/20 flex items-center justify-center">
+          <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-slate-50">Limited Growth Insights</h3>
+        <p class="text-slate-300/80">No data-driven insights to identify struggling students, optimize resources, or demonstrate school performance to stakeholders.</p>
+      </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-emerald-900/50 to-slate-800/50 rounded-2xl p-8 border border-emerald-700/50">
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold mb-4 text-slate-50">The Digital Solution for Modern Schools</h3>
+        <p class="text-slate-300/90 max-w-4xl mx-auto text-lg leading-relaxed mb-6">
+          Our school management systems are built specifically for Nigerian schools—affordable, mobile-optimized, 
+          and designed to work reliably even with limited internet connectivity. Transform your school operations 
+          while keeping costs manageable.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+           
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Mobile-First Design
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Low Bandwidth Optimized
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Local Support
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Our School Solutions</h2>
+      <p class="text-slate-300/90 max-w-3xl mx-auto">
+        Comprehensive digital tools designed to modernize every aspect of school operations.
+      </p>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-2 mb-16">
+      <!-- Smart School Portal -->
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-emerald-400/70 transition duration-300">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-3 text-slate-50">Smart School Portal</h3>
+            <p class="text-slate-300/80 mb-6">Complete school management system with role-based access for administrators, teachers, students, and parents.</p>
+          </div>
+        </div>
+        
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="space-y-3">
+            <h4 class="font-semibold text-emerald-300">For Administrators</h4>
+            <ul class="space-y-2 text-sm text-slate-300/80">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Student enrollment & records
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Staff management
+              </li>
+                            <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Performance analytics
+              </li>
+            </ul>
+          </div>
+          
+          <div class="space-y-3">
+            <h4 class="font-semibold text-emerald-300">For Teachers & Parents</h4>
+            <ul class="space-y-2 text-sm text-slate-300/80">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Grade book & attendance
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Parent communication
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Progress reports
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Mobile notifications
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assessment Platform -->
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-3 text-slate-50">Digital Assessment Platform</h3>
+            <p class="text-slate-300/80 mb-6">Fast, mobile-optimized quiz and practice platforms that work offline and sync when connected.</p>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <h4 class="font-semibold text-sky-300 mb-3">Features</h4>
+              <ul class="space-y-2 text-sm text-slate-300/80">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Offline-capable quizzes
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Instant grading
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Progress tracking
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Multi-subject support
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-sky-300 mb-3">Benefits</h4>
+              <ul class="space-y-2 text-sm text-slate-300/80">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Reduce paper costs
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Save grading time
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Engage students
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Data insights
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <!-- CTA Section -->
+  <section class="max-w-4xl mx-auto px-6 text-center">
+    <div class="bg-gradient-to-r from-emerald-900/50 to-sky-900/50 rounded-2xl p-8 border border-emerald-700/50">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Ready to Transform Your School?</h2>
+      <p class="text-slate-300/90 text-lg mb-8 max-w-2xl mx-auto">
+        Join forward-thinking schools across Nigeria that are already using our solutions to improve operations, 
+        engage parents, and enhance student outcomes.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/book-a-call" class="px-8 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold">
+          Schedule Free Demo
+        </a>
+        <a href="/contact" class="px-8 py-3 rounded-lg border border-slate-600 hover:border-slate-500">
+          Ask Questions
+        </a>
+      </div>
+      <p class="text-slate-400 text-sm mt-4">
+        Free consultation • No obligation • Local support in Lagos
+      </p>
     </div>
   </section>
 </Layout>
