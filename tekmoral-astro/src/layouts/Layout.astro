@@ -108,31 +108,174 @@ const path = Astro.url.pathname;
 	</head>
 	<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
 	<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:rounded-md focus:bg-sky-600 focus:px-3 focus:py-2 focus:text-slate-900">Skip to content</a>
-	<header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-950/75 border-b border-slate-800/60">
-		<nav aria-label="Primary" class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-2 sm:gap-4 md:gap-6">
-			<a href="/" class="flex flex-col items-center gap-1 font-semibold flex-shrink-0">
+	<header class="sticky top-0 z-40 bg-slate-950 border-b border-slate-800/60">
+		<nav aria-label="Primary" class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+			<a href="/" class="flex flex-col items-center gap-1 font-semibold flex-shrink-0 z-50">
 				<img src="/logo.png" alt="TekMoral logo" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-sm object-contain" loading="eager" fetchpriority="high" />
 				<span class="text-sm sm:text-lg md:text-xl leading-none">TekMoral</span>
 			</a>
-			<div class="flex items-center gap-2 sm:gap-4 md:gap-6 text-slate-300/90 text-sm sm:text-base">
+
+			<!-- Desktop Navigation -->
+			<div class="hidden md:flex items-center gap-6 text-slate-300/90">
 				<a href="/services" class={`pb-0.5 transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/services') ? 'text-sky-300 border-b-2 border-sky-500' : ''}`}
 					aria-current={path.startsWith('/services') ? 'page' : undefined}>Services</a>
-				<a href="/school-solutions" class={`pb-0.5 transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 hidden sm:block ${path.startsWith('/school-solutions') ? 'text-sky-300 border-b-2 border-sky-500' : ''}`}
+				<a href="/school-solutions" class={`pb-0.5 transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/school-solutions') ? 'text-sky-300 border-b-2 border-sky-500' : ''}`}
 					aria-current={path.startsWith('/school-solutions') ? 'page' : undefined}>School Solutions</a>
-				<a href="/school-solutions" class={`pb-0.5 transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden ${path.startsWith('/school-solutions') ? 'text-sky-300 border-b-2 border-sky-500' : ''}`}
-					aria-current={path.startsWith('/school-solutions') ? 'page' : undefined}>Schools</a>
 				<a href="/work" class={`pb-0.5 transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/work') ? 'text-sky-300 border-b-2 border-sky-500' : ''}`}
 					aria-current={path.startsWith('/work') ? 'page' : undefined}>Work</a>
 				<a href={`https://api.whatsapp.com/send?${new URLSearchParams({ phone: businessNumber, text: "Hi, I'd like to chat about a project." }).toString()}`}
 					target="_blank" rel="noopener noreferrer"
-					class="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md bg-gradient-to-r from-sky-500 to-emerald-400 text-slate-900 font-semibold shadow hover:from-sky-400 hover:to-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 text-xs sm:text-sm" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
-					<svg aria-hidden="true" viewBox="0 0 32 32" class="h-3 w-3 sm:h-4 sm:w-4 fill-current"><path d="M19.11 17.85c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.37-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.93-2.26-.24-.58-.5-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.56-.35zM16.03 4C9.93 4 5 8.93 5 15.03c0 1.94.52 3.76 1.43 5.33L5 27l6.81-1.79a10.97 10.97 0 0 0 4.22.82c6.1 0 11.03-4.93 11.03-11.03C27.06 8.93 22.13 4 16.03 4z"></path></svg>
-					<span class="hidden sm:inline">Send a Message</span>
-					<span class="sm:hidden">Chat</span>
+					class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-gradient-to-r from-sky-500 to-emerald-400 text-slate-900 font-semibold shadow hover:from-sky-400 hover:to-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+					<svg aria-hidden="true" viewBox="0 0 32 32" class="h-4 w-4 fill-current"><path d="M19.11 17.85c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.37-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.93-2.26-.24-.58-.5-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.56-.35zM16.03 4C9.93 4 5 8.93 5 15.03c0 1.94.52 3.76 1.43 5.33L5 27l6.81-1.79a10.97 10.97 0 0 0 4.22.82c6.1 0 11.03-4.93 11.03-11.03C27.06 8.93 22.13 4 16.03 4z"></path></svg>
+					Send a Message
 				</a>
 			</div>
+
+			<!-- Mobile Menu Button -->
+			<button id="mobile-menu-button" class="md:hidden relative z-50 p-2 rounded-lg hover:bg-slate-800/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400" aria-label="Toggle navigation menu" aria-expanded="false">
+				<div class="w-6 h-6 flex flex-col justify-center items-center">
+					<span class="hamburger-line w-6 h-0.5 bg-slate-300 transition-all duration-300 ease-in-out"></span>
+					<span class="hamburger-line w-6 h-0.5 bg-slate-300 transition-all duration-300 ease-in-out mt-1.5"></span>
+					<span class="hamburger-line w-6 h-0.5 bg-slate-300 transition-all duration-300 ease-in-out mt-1.5"></span>
+				</div>
+			</button>
+
+			<!-- Mobile Menu Overlay -->
 		</nav>
 	</header>
+
+	<!-- Mobile Menu Overlay (moved outside header to overlay it) -->
+	<div id="mobile-menu" class="fixed inset-0 z-50 md:hidden transform translate-x-full transition-transform duration-300 ease-in-out">
+		<div id="mobile-menu-overlay" class="absolute top-0 left-0 right-0 h-[40vh] bg-black"></div>
+		<div class="relative h-[70vh] overflow-y-auto flex flex-col justify-start items-stretch px-6 pt-16 pb-8">
+			<button id="mobile-menu-close" class="absolute top-4 right-4 p-3 rounded-md text-slate-300 hover:text-slate-100 hover:bg-slate-800/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400" aria-label="Close menu">
+				<svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+			<nav aria-label="Mobile" class="flex flex-col gap-2 items-start">
+				<a href="/services" class={`block text-lg font-medium transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/services') ? 'text-sky-300' : 'text-slate-100'}`}
+					aria-current={path.startsWith('/services') ? 'page' : undefined}>Services</a>
+			<a href="/school-solutions" class={`block text-lg font-medium transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/school-solutions') ? 'text-sky-300' : 'text-slate-100'}`}
+				aria-current={path.startsWith('/school-solutions') ? 'page' : undefined}>School Solutions</a>
+			<a href="/work" class={`block text-lg font-medium transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/work') ? 'text-sky-300' : 'text-slate-100'}`}
+				aria-current={path.startsWith('/work') ? 'page' : undefined}>Work</a>
+			<a href="/contact" class={`block text-lg font-medium transition-colors hover:text-sky-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${path.startsWith('/contact') ? 'text-sky-300' : 'text-slate-100'}`}
+				aria-current={path.startsWith('/contact') ? 'page' : undefined}>Contact</a>
+			</nav>
+			<div class="pt-4">
+				<a href={`https://api.whatsapp.com/send?${new URLSearchParams({ phone: businessNumber, text: "Hi, I'd like to chat about a project." }).toString()}`}
+					target="_blank" rel="noopener noreferrer"
+					class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-gradient-to-r from-sky-500 to-emerald-400 text-slate-900 font-semibold shadow hover:from-sky-400 hover:to-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 text-xs" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+					<svg aria-hidden="true" viewBox="0 0 32 32" class="h-3 w-3 fill-current"><path d="M19.11 17.85c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.37-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.93-2.26-.24-.58-.5-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.56-.35zM16.03 4C9.93 4 5 8.93 5 15.03c0 1.94.52 3.76 1.43 5.33L5 27l6.81-1.79a10.97 10.97 0 0 0 4.22.82c6.1 0 11.03-4.93 11.03-11.03C27.06 8.93 22.13 4 16.03 4z"></path></svg>
+					Chat Us
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script is:inline>
+		// Mobile menu functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const menuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+			const hamburgerLines = menuButton.querySelectorAll('.hamburger-line');
+			const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+			const mobileMenuClose = document.getElementById('mobile-menu-close');
+			let isMenuOpen = false;
+
+			function toggleMenu() {
+				isMenuOpen = !isMenuOpen;
+				
+				// Toggle menu visibility
+				if (isMenuOpen) {
+					mobileMenu.classList.remove('translate-x-full');
+					mobileMenu.classList.add('translate-x-0');
+					document.body.style.overflow = 'hidden';
+				} else {
+					mobileMenu.classList.remove('translate-x-0');
+					mobileMenu.classList.add('translate-x-full');
+					document.body.style.overflow = '';
+				}
+
+				// Animate hamburger to X
+				if (isMenuOpen) {
+					hamburgerLines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+					hamburgerLines[1].style.opacity = '0';
+					hamburgerLines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+				} else {
+					hamburgerLines[0].style.transform = 'rotate(0) translate(0, 0)';
+					hamburgerLines[1].style.opacity = '1';
+					hamburgerLines[2].style.transform = 'rotate(0) translate(0, 0)';
+				}
+
+				// Update aria-expanded
+				menuButton.setAttribute('aria-expanded', isMenuOpen.toString());
+			}
+
+			// Menu button click
+			menuButton.addEventListener('click', toggleMenu);
+
+			// Close menu when clicking on overlay
+			if (mobileMenuClose) {
+				mobileMenuClose.addEventListener('click', toggleMenu);
+			}
+			if (mobileMenuOverlay) {
+				mobileMenuOverlay.addEventListener('click', toggleMenu);
+			}
+			mobileMenu.addEventListener('click', function(e) {
+				if (e.target === mobileMenu) {
+					toggleMenu();
+				}
+			});
+
+			// Close menu when clicking on navigation links
+			const mobileNavLinks = mobileMenu.querySelectorAll('a');
+			mobileNavLinks.forEach(link => {
+				link.addEventListener('click', function() {
+					// Only close if it's not an external link
+					if (!link.hasAttribute('target')) {
+						toggleMenu();
+					}
+				});
+			});
+
+			// Close menu on escape key
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape' && isMenuOpen) {
+					toggleMenu();
+				}
+			});
+
+			// Reduce top padding of first page section to move content closer to header
+			(function adjustFirstSectionPadding() {
+				const main = document.getElementById('main-content');
+				if (!main) return;
+				const firstSection = main.querySelector('section');
+				const replacePadding = (el) => {
+					if (!el || !el.classList) return;
+					const map = new Map([
+						['py-24','py-16'],
+						['py-20','py-12'],
+						['py-16','py-10'],
+						['py-14','py-10'],
+						['py-12','py-8']
+					]);
+					for (const [from, to] of map.entries()) {
+						if (el.classList.contains(from)) {
+							el.classList.replace(from, to);
+						}
+					}
+				};
+				if (firstSection) {
+					replacePadding(firstSection);
+					// Also adjust a padded container inside the hero/first section
+					const innerPadded = firstSection.querySelector('[class*="py-20"], [class*="py-16"], [class*="py-14"], [class*="py-12"], [class*="py-24"]');
+					replacePadding(innerPadded);
+				}
+			})();
+		});
+	</script>
 		<main id="main-content" tabindex="-1">
 			<slot />
 		</main>
@@ -166,6 +309,16 @@ const path = Astro.url.pathname;
 		box-sizing: border-box;
 	}
 	
+	/* Bring first section closer to header on all pages */
+	#main-content > section:first-of-type { padding-top: 0.75rem !important; }
+	#main-content > section:first-of-type > [class*="max-w-"] { padding-top: 0.75rem !important; }
+	#main-content > section:first-of-type > [class*="py-"] { padding-top: 0.75rem !important; }
+	@media (min-width: 768px) {
+		#main-content > section:first-of-type,
+		#main-content > section:first-of-type > [class*="max-w-"],
+		#main-content > section:first-of-type > [class*="py-"] { padding-top: 1rem !important; }
+	}
+
 	/* Prevent horizontal scroll on mobile */
 	.max-w-6xl,
 	.max-w-4xl,

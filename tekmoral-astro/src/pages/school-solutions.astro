@@ -85,30 +85,32 @@ import Layout from '../layouts/Layout.astro';
           and designed to work reliably even with limited internet connectivity. Transform your school operations 
           while keeping costs manageable.
         </p>
-        <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
-          <span class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-           
-          <span class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+        <ul class="flex flex-col items-start gap-2 text-sm text-slate-400 text-left mx-auto">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            Mobile-First Design
-          </span>
-          <span class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+            <span class="leading-tight">Affordable Pricing</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            Low Bandwidth Optimized
-          </span>
-          <span class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+            <span class="leading-tight">Mobile-First Design</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            Local Support
-          </span>
-        </div>
+            <span class="leading-tight">Low Bandwidth Optimized</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight">Local Support</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -125,8 +127,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="grid gap-8 lg:grid-cols-2 mb-16">
       <!-- Smart School Portal -->
       <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-emerald-400/70 transition duration-300">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+        <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0 sm:mx-0 mx-auto">
             <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
@@ -140,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="space-y-3">
             <h4 class="font-semibold text-emerald-300">For Administrators</h4>
-            <ul class="space-y-2 text-sm text-slate-300/80">
+            <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -164,7 +166,7 @@ import Layout from '../layouts/Layout.astro';
           
           <div class="space-y-3">
             <h4 class="font-semibold text-emerald-300">For Teachers & Parents</h4>
-            <ul class="space-y-2 text-sm text-slate-300/80">
+            <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -196,8 +198,8 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Assessment Platform -->
       <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0">
+        <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0 sm:mx-0 mx-auto">
             <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
             </svg>
@@ -212,7 +214,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="grid gap-4 sm:grid-cols-2">
             <div>
               <h4 class="font-semibold text-sky-300 mb-3">Features</h4>
-              <ul class="space-y-2 text-sm text-slate-300/80">
+              <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
                 <li class="flex items-center gap-2">
                   <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -242,7 +244,7 @@ import Layout from '../layouts/Layout.astro';
             
             <div>
               <h4 class="font-semibold text-sky-300 mb-3">Benefits</h4>
-              <ul class="space-y-2 text-sm text-slate-300/80">
+              <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
                 <li class="flex items-center gap-2">
                   <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -273,6 +275,58 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  <!-- Tech & Coding Partnership -->
+  <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-indigo-400/70 transition duration-300 mb-16">
+    <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4 mb-6">
+      <div class="w-12 h-12 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 sm:mx-0 mx-auto">
+        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-4-6a4 4 0 108 0"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold mb-3 text-slate-50">Tech & Coding Partnership Program</h3>
+        <p class="text-slate-300/80">We partner with schools to deliver hands‑on coding and digital skills that prepare students for the future — aligned with the Nigerian curriculum and global standards.</p>
+      </div>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      <div>
+        <h4 class="font-semibold text-indigo-300 mb-3">Program Highlights</h4>
+        <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Beginner to advanced tracks (Web, Python, AI/ML)
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Project‑based learning and coding clubs
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Hack days, challenges and showcases
+          </li>
+                  </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-indigo-300 mb-3">Delivery Options</h4>
+        <ul class="flex flex-col items-start space-y-2 text-sm text-slate-300/80 text-left">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            In‑school weekly sessions
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Holiday bootcamps & after‑school clubs
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Hybrid + device‑sharing models
+          </li>
+                  </ul>
+      </div>
+    </div>
+      </div>
+
   </section>
 
   
@@ -298,4 +352,11 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </div>
   </section>
+
+<style>
+  /* Cards checklist alignment */
+  .group ul { align-items: flex-start !important; text-align: left !important; }
+  .group ul li { display: flex; align-items: center; gap: 0.5rem; line-height: 1.25; }
+  .group ul li svg { width: 1rem; height: 1rem; flex-shrink: 0; }
+</style>
 </Layout>
