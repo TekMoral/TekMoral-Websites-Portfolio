@@ -282,11 +282,10 @@ const path = Astro.url.pathname;
 		<main id="main-content" tabindex="-1">
 			<slot />
 		</main>
-	<footer class="mt-20 border-t border-slate-800/60">
+	<footer class="mt-8 md:mt-4 border-t border-slate-800/60">
 		<div class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate-400">
 			<nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-4">
-				<a href="/sitemap-index.xml" class="text-sky-400 hover:text-sky-300">Sitemap</a>
-								<a href="https://github.com/TekMOral" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300">GitHub</a>
+												<a href="https://github.com/TekMOral" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300">GitHub</a>
 				<a href={`https://wa.me/${businessNumber}?text=${encodeURIComponent("Hi, I'm interested in your services")}`} target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300">WhatsApp</a>
 				<a href="https://www.facebook.com/adewale.gabriel.905580" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300">Facebook</a>
 			</nav>
