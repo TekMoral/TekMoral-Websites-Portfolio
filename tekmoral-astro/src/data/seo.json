@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "TekMoral",
+    "url": "https://www.tekmoral.com",
+    "description": "Professional web development, AI solutions, and digital transformation services for SMEs, schools, and startups in Lagos, Nigeria.",
+    "logo": "https://www.tekmoral.com/logo.svg",
+    "image": "https://www.tekmoral.com/og-home.png",
+    "phone": "+234 816 346 8669",
+    "email": "hello@tekmoral.com",
+    "address": "Lagos, Nigeria",
+    "social": {
+      "twitter": "https://twitter.com/tekmoral",
+      "linkedin": "https://linkedin.com/company/tekmoral",
+      "facebook": "https://facebook.com/tekmoral"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "TekMoral — AI‑Ready Websites & Apps that Grow Your Business",
+      "description": "We build high-converting websites, custom web applications, and AI solutions for SMEs, schools, and startups in Lagos, Nigeria. Fast deployment, optimized performance, built to scale.",
+      "keywords": "web development, AI solutions, custom apps, digital transformation, Lagos Nigeria",
+      "ogImage": "https://www.tekmoral.com/og-home.png",
+      "canonical": "https://www.tekmoral.com/"
+    },
+    "services": {
+      "title": "Our Services — TekMoral",
+      "description": "Professional web development, AI solutions, and digital transformation services for SMEs, schools, and startups. Custom websites, apps, and consulting.",
+      "keywords": "web development services, AI solutions, custom applications, tech consulting, digital transformation",
+      "ogImage": "https://www.tekmoral.com/og-services.png",
+      "canonical": "https://www.tekmoral.com/services"
+    },
+    "school-solutions": {
+      "title": "School Solutions — TekMoral",
+      "description": "Smart school portals, digital records, analytics, and mobile-first quiz platforms designed for educational institutions. Affordable and optimized for low bandwidth.",
+      "keywords": "school management system, digital learning platform, CBT exams, student portal, education technology",
+      "ogImage": "https://www.tekmoral.com/og-school-solutions.png",
+      "canonical": "https://www.tekmoral.com/school-solutions"
+    },
+    "work": {
+      "title": "Our Work — TekMoral",
+      "description": "Explore our portfolio of websites, web applications, and digital solutions built for businesses and organizations across Nigeria and beyond.",
+      "keywords": "portfolio, case studies, web projects, application development, client work",
+      "ogImage": "https://www.tekmoral.com/og-work.png",
+      "canonical": "https://www.tekmoral.com/work"
+    },
+    "get-started": {
+      "title": "Get Started — TekMoral",
+      "description": "Schedule a free consultation with our team. We'll discuss your goals, challenges, and how we can help transform your business with technology.",
+      "keywords": "consultation, booking, contact, project inquiry, free demo",
+      "ogImage": "https://www.tekmoral.com/og-get-started.png",
+      "canonical": "https://www.tekmoral.com/get-started"
+    },
+    "faq": {
+      "title": "FAQ — TekMoral",
+      "description": "Frequently asked questions about TekMoral's services, pricing, and process.",
+      "keywords": "FAQ, questions, pricing, services, support",
+      "ogImage": "https://www.tekmoral.com/og-faq.png",
+      "canonical": "https://www.tekmoral.com/faq"
+    },
+    "blog": {
+      "title": "Blog — TekMoral",
+      "description": "Latest insights, tips, and case studies on web development, AI, and digital transformation.",
+      "keywords": "blog, articles, insights, technology, digital transformation",
+      "ogImage": "https://www.tekmoral.com/og-blog.png",
+      "canonical": "https://www.tekmoral.com/blog"
+    },
+    "contact": {
+      "title": "Contact Us — TekMoral",
+      "description": "Get in touch with TekMoral. We're here to help with your digital transformation journey.",
+      "keywords": "contact, support, inquiry, help, reach out",
+      "ogImage": "https://www.tekmoral.com/og-contact.png",
+      "canonical": "https://www.tekmoral.com/contact"
+    }
+  }
+}

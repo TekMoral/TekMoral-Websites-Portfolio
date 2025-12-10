@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  primaryButtonText?: string;
+  primaryButtonLink?: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
+  image?: string;
+  imageAlt?: string;
+  badge?: string;
+  badgeIcon?: boolean;
+}
+
+const {
+  title,
+  description,
+  primaryButtonText = 'Get Started',
+  primaryButtonLink = '/book-a-call',
+  secondaryButtonText,
+  secondaryButtonLink,
+  image,
+  imageAlt = 'Hero Image',
+  badge,
+  badgeIcon = true,
+} = Astro.props;
+---
+
+<section class={`relative overflow-hidden ${image ? 'bg-white' : ''}`}>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-900/30 via-sky-600/10 to-slate-950"></div>
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class={`${image ? 'grid md:grid-cols-2 gap-8 items-center' : 'text-center'}`}>
+      <div class={`flex flex-col ${image ? 'md:items-start' : 'items-center'} ${image ? 'md:text-left' : 'text-center'} gap-6 ${image ? 'order-2 md:order-1' : ''}`}>
+        {badge && (
+          <div class="inline-flex items-center gap-2 text-sky-600 text-xs uppercase tracking-wider">
+            {badgeIcon && <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>}
+            {badge}
+          </div>
+        )}
+        <h1 class={`font-semibold leading-tight ${image ? 'text-slate-900' : 'text-slate-900'} ${image ? 'text-4xl sm:text-5xl md:text-5xl lg:text-6xl' : 'text-4xl sm:text-5xl md:text-6xl'}`}>
+          {title}
+        </h1>
+        <p class={`max-w-2xl ${image ? 'text-slate-700' : 'text-slate-700'}`}>
+          {description}
+        </p>
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
+          <a href={primaryButtonLink} class="px-5 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold">
+            {primaryButtonText}
+          </a>
+          {secondaryButtonText && (
+            <a href={secondaryButtonLink} class="px-5 py-3 rounded-lg bg-slate-200 border border-slate-300 text-slate-900 hover:bg-slate-300 hover:border-slate-400 shadow-sm">
+              {secondaryButtonText}
+            </a>
+          )}
+        </div>
+      </div>
+      {image && (
+        <div class="order-1 md:order-2">
+          <img src={image} alt={imageAlt} class="w-full h-auto rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.45)]" />
+        </div>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+<Layout 
+  title="Get Started — TekMoral" 
+  description="Schedule a free consultation with our team to discuss your project and how we can help transform your business."
+  ogImage="https://www.tekmoral.com/og-get-started.png"
+  noIndex={false}
+>
+  <HeroSection
+    title="Let's Build Something Great Together"
+    description="Schedule a free consultation with our team. We'll discuss your goals, challenges, and how we can help transform your business with technology."
+    badge="Get Started"
+    primaryButtonText="Book Now"
+    primaryButtonLink="#booking"
+  />
+
+  <section id="booking" class="max-w-4xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Booking Form -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-6 text-slate-900">Schedule Your Free Consultation</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="New Consultation Request from TekMoral" />
+          <input type="hidden" name="redirect" value="https://www.tekmoral.com/thank-you" />
+
+          <label class="grid gap-2">
+            <span class="text-sm font-medium text-slate-900">Name *</span>
+            <input class="rounded-md bg-slate-100 border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500" name="name" required />
+          </label>
+
+          <label class="grid gap-2">
+            <span class="text-sm font-medium text-slate-900">Email *</span>
+            <input class="rounded-md bg-slate-100 border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500" type="email" name="email" required />
+          </label>
+
+          <label class="grid gap-2">
+            <span class="text-sm font-medium text-slate-900">Phone</span>
+            <input class="rounded-md bg-slate-100 border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500" type="tel" name="phone" />
+          </label>
+
+          <label class="grid gap-2">
+            <span class="text-sm font-medium text-slate-900">Project Type *</span>
+            <select class="rounded-md bg-slate-100 border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500" name="project_type" required>
+              <option value="">Select a project type</option>
+              <option value="website">Business Website</option>
+              <option value="app">Web Application</option>
+              <option value="ai">AI Solution</option>
+              <option value="consulting">Consulting</option>
+              <option value="training">Training</option>
+              <option value="school">School Solution</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label class="grid gap-2">
+            <span class="text-sm font-medium text-slate-900">Message *</span>
+            <textarea class="rounded-md bg-slate-100 border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline" required></textarea>
+          </label>
+
+          <button type="submit" class="w-full px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold transition-colors">
+            Schedule Consultation
+          </button>
+        </form>
+      </div>
+
+      <!-- Info Section -->
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-slate-900">What to Expect</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Clarify goals</strong> and success metrics for your project</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Understand challenges</strong> and current status</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Explore solutions</strong> tailored to your needs</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Discuss timeline</strong> and investment</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-slate-900">Quick Facts</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>⏱️ <strong>Duration:</strong> 30-45 minutes</li>
+            <li>💬 <strong>Format:</strong> Video call or in-person (Lagos)</li>
+            <li>💰 <strong>Cost:</strong> Completely free</li>
+            <li>📋 <strong>Obligation:</strong> None - just a conversation</li>
+          </ul>
+        </div>
+
+        <div class="bg-sky-50 border border-sky-200 rounded-lg p-4">
+          <p class="text-sm text-slate-700">
+            <strong>Prefer to chat first?</strong> Reach out on <a href="https://wa.me/2348163468669" class="text-sky-600 hover:text-sky-700 underline">WhatsApp</a> and we'll schedule a time that works for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

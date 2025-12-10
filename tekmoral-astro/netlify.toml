@@ -24,25 +24,25 @@
 
 # Images - cache for 1 week
 [[headers]]
-  for = "*.{png,jpg,jpeg,gif,webp,svg,ico}"
+  for = "/**/*.{png,jpg,jpeg,gif,webp,svg,ico}"
   [headers.values]
     cache-control = "public, max-age=604800"
 
 # Fonts - cache for 1 month
 [[headers]]
-  for = "*.{woff,woff2,ttf,eot,otf}"
+  for = "/**/*.{woff,woff2,ttf,eot,otf}"
   [headers.values]
     cache-control = "public, max-age=2592000"
 
 # CSS and JS files - cache for 1 day
 [[headers]]
-  for = "*.{css,js,mjs}"
+  for = "/**/*.{css,js,mjs}"
   [headers.values]
     cache-control = "public, max-age=86400"
 
 # Text files - cache for 1 hour
 [[headers]]
-  for = "*.{txt,xml,json}"
+  for = "/**/*.{txt,xml,json}"
   [headers.values]
     cache-control = "public, max-age=3600"
 

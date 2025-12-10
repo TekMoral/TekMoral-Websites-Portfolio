@@ -1,0 +1,106 @@
+---
+interface Props {
+  type: 'Organization' | 'LocalBusiness' | 'Service' | 'FAQPage' | 'BreadcrumbList';
+  data?: any;
+}
+
+const { type, data } = Astro.props;
+
+let schema: any = {};
+
+switch (type) {
+  case 'Organization':
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'TekMoral',
+      'url': 'https://www.tekmoral.com',
+      'logo': 'https://www.tekmoral.com/logo.svg',
+      'description': 'Professional web development, AI solutions, and digital transformation services for SMEs, schools, and startups.',
+      'sameAs': [
+        'https://twitter.com/tekmoral',
+        'https://linkedin.com/company/tekmoral',
+        'https://facebook.com/tekmoral'
+      ],
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'contactType': 'Customer Service',
+        'telephone': '+234-816-346-8669',
+        'email': 'hello@tekmoral.com'
+      },
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Lagos',
+        'addressCountry': 'NG'
+      }
+    };
+    break;
+
+  case 'LocalBusiness':
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      'name': 'TekMoral',
+      'image': 'https://www.tekmoral.com/logo.svg',
+      'description': 'Web Development & AI Solutions Company',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Lagos',
+        'addressCountry': 'NG'
+      },
+      'telephone': '+234-816-346-8669',
+      'url': 'https://www.tekmoral.com',
+      'priceRange': '$$'
+    };
+    break;
+
+  case 'Service':
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': data?.title || 'TekMoral Services',
+      'description': data?.description || 'Professional digital solutions',
+      'provider': {
+        '@type': 'Organization',
+        'name': 'TekMoral',
+        'url': 'https://www.tekmoral.com'
+      },
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'NG'
+      },
+      'serviceType': data?.type || 'Web Development'
+    };
+    break;
+
+  case 'FAQPage':
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': data?.faqs?.map((faq: any) => ({
+        '@type': 'Question',
+        'name': faq.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': faq.answer
+        }
+      })) || []
+    };
+    break;
+
+  case 'BreadcrumbList':
+    schema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': data?.items?.map((item: any, index: number) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': item.name,
+        'item': item.url
+      })) || []
+    };
+    break;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

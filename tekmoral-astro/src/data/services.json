@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": "websites",
+      "title": "Business Websites & Branding",
+      "description": "Professional sites, landing pages, and brand systems optimized for conversion. Optional AI chatbots to engage visitors.",
+      "color": "sky",
+      "icon": "0 0 24 24",
+      "features": [
+        "Professional websites for SMEs and personal brands",
+        "Landing pages that convert",
+        "AI chatbots for customer engagement"
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Custom Web Applications",
+      "description": "Management systems, portals with authentication, dashboards, and AI automation for reporting and insights.",
+      "color": "emerald",
+      "icon": "0 0 24 24",
+      "features": [
+        "Management systems (inventory, HR, finance, booking)",
+        "Secure portals with dashboards",
+        "AI-powered automation (reports & predictions)"
+      ]
+    },
+    {
+      "id": "consulting",
+      "title": "Tech Consulting & Training",
+      "description": "Digital transformation guidance, web/cloud training, and introductory AI/ML programs for teams and schools.",
+      "color": "amber",
+      "icon": "0 0 24 24",
+      "features": [
+        "Digital transformation guidance",
+        "Training on web and cloud technologies",
+        "Introductory AI/ML training"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI & Machine Learning",
+      "description": "Predictive analytics, chat/assistants, and models tailored to business goals, including trading insights.",
+      "color": "purple",
+      "icon": "0 0 24 24",
+      "features": [
+        "Predictive analytics for schools & businesses",
+        "AI-powered chatbots & virtual assistants",
+        "Models for trading insights"
+      ]
+    }
+  ]
+}
