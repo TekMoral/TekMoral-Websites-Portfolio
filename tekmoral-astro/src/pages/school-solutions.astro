@@ -37,55 +37,61 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Problems Section -->
-  <section class="max-w-6xl mx-auto px-6 py-16">
+  <section class="max-w-6xl mx-auto px-6 py-12">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Challenges Facing Nigerian Schools Today</h2>
-      <p class="text-slate-300/90 max-w-3xl mx-auto text-lg">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">Challenges Facing Nigerian Schools Today</h2>
+      <p class="text-slate-300/90 max-w-3xl mx-auto text-base md:text-lg">
         Many schools struggle with outdated systems that create inefficiencies and limit growth potential.
       </p>
     </div>
     
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/20 flex items-center justify-center">
-          <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    <div class="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-start gap-4 md:flex-col md:items-center md:text-center">
+        <div class="w-12 h-12 flex-shrink-0 rounded-full bg-red-500/15 flex items-center justify-center sm:mt-1 md:mx-auto md:flex-shrink-0">
+          <svg class="w-6 h-6 text-red-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2H7zm2 4h6v2H9V6zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-slate-50">Paper-Based Records</h3>
-        <p class="text-slate-300/80">Student files, grades, and attendance tracked manually, leading to errors, loss of data, and time-consuming processes.</p>
+        <div class="flex-1 md:flex-none">
+          <h3 class="text-lg md:text-xl font-semibold mb-2 text-slate-50">Paper-Based Records</h3>
+          <p class="text-sm md:text-base text-slate-300/80">Student files, grades, and attendance tracked manually, leading to errors, loss of data, and time-consuming processes.</p>
+        </div>
       </div>
       
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center">
-          <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      <div class="flex flex-col sm:flex-row sm:items-start gap-4 md:flex-col md:items-center md:text-center">
+        <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-500/15 flex items-center justify-center sm:mt-1 md:mx-auto md:flex-shrink-0">
+          <svg class="w-6 h-6 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12h-8v-2h8v2zm0-3h-8V9h8v2zm0-3H4V4h14v4z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-slate-50">Poor Parent Communication</h3>
-        <p class="text-slate-300/80">Limited visibility into student progress, irregular updates, and difficulty reaching parents during emergencies.</p>
+        <div class="flex-1 md:flex-none">
+          <h3 class="text-lg md:text-xl font-semibold mb-2 text-slate-50">Poor Parent Communication</h3>
+          <p class="text-sm md:text-base text-slate-300/80">Limited visibility into student progress, irregular updates, and difficulty reaching parents during emergencies.</p>
+        </div>
       </div>
       
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-500/20 flex items-center justify-center">
-          <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+      <div class="flex flex-col sm:flex-row sm:items-start gap-4 md:flex-col md:items-center md:text-center">
+        <div class="w-12 h-12 flex-shrink-0 rounded-full bg-orange-500/15 flex items-center justify-center sm:mt-1 md:mx-auto md:flex-shrink-0">
+          <svg class="w-6 h-6 text-orange-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4-2h2v20h-2zm4 4h2v16h-2zm4-4h2v20h-2z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-slate-50">Limited Growth Insights</h3>
-        <p class="text-slate-300/80">No data-driven insights to identify struggling students, optimize resources, or demonstrate school performance to stakeholders.</p>
+        <div class="flex-1 md:flex-none">
+          <h3 class="text-lg md:text-xl font-semibold mb-2 text-slate-50">Limited Growth Insights</h3>
+          <p class="text-sm md:text-base text-slate-300/80">No data-driven insights to identify struggling students, optimize resources, or demonstrate school performance to stakeholders.</p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-gradient-to-r from-emerald-900/50 to-slate-800/50 rounded-2xl p-8 border border-emerald-700/50">
+    <div class="bg-gradient-to-r from-emerald-900/50 to-slate-800/50 rounded-2xl p-8 border border-emerald-700/50 mb-8">
       <div class="text-center">
         <h3 class="text-2xl font-semibold mb-4 text-slate-50">The Digital Solution for Modern Schools</h3>
-        <p class="text-slate-300/90 max-w-4xl mx-auto text-lg leading-relaxed mb-6">
+        <p class="text-slate-300/90 max-w-4xl mx-auto text-lg leading-relaxed mb-6 text-left sm:text-center">
           Our school management systems are built specifically for Nigerian schools—affordable, mobile-optimized, 
           and designed to work reliably even with limited internet connectivity. Transform your school operations 
           while keeping costs manageable.
         </p>
-        <ul class="flex flex-col items-stretch text-sm text-slate-400 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none mx-auto">
+        <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-400 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none mx-auto">
           <li class="flex items-center gap-2">
             <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -116,9 +122,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Solutions Section -->
-  <section id="solutions" class="max-w-6xl mx-auto px-6 py-16">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Our School Solutions</h2>
+  <section id="solutions" class="max-w-6xl mx-auto px-6 py-8">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-3">Our School Solutions</h2>
       <p class="text-slate-300/90 max-w-3xl mx-auto">
         Comprehensive digital tools designed to modernize every aspect of school operations.
       </p>
@@ -142,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="space-y-3">
             <h4 class="font-semibold text-emerald-300">For Administrators</h4>
-            <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+            <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -172,7 +178,7 @@ import Layout from '../layouts/Layout.astro';
           
           <div class="space-y-3">
             <h4 class="font-semibold text-emerald-300">For Teachers & Parents</h4>
-            <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+            <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
               <li class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -203,24 +209,24 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Assessment Platform -->
-      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300">
-        <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4 mb-6">
-          <div class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0 sm:mx-0 mx-auto">
+      <div class="group relative overflow-hidden rounded-2xl bg-slate-900/80 p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] ring-1 ring-slate-700 hover:ring-sky-400/70 transition duration-300">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-lg bg-sky-500/20 flex items-center justify-center sm:mt-0">
             <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
             </svg>
           </div>
-          <div>
-            <h3 class="text-2xl font-semibold mb-3 text-slate-50">Digital Assessment Platform</h3>
-            <p class="text-slate-300/80 mb-6">Fast, mobile-optimized quiz and practice platforms that work offline and sync when connected.</p>
+          <div class="flex-1">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-2 text-slate-50">Digital Assessment Platform</h3>
+            <p class="text-sm sm:text-base text-slate-300/80">Fast, mobile-optimized quiz and practice platforms that work offline and sync when connected.</p>
           </div>
         </div>
         
         <div class="space-y-6">
           <div class="grid gap-4 sm:grid-cols-2">
             <div>
-              <h4 class="font-semibold text-sky-300 mb-3">Features</h4>
-              <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+              <h4 class="font-semibold text-sky-300 mb-3 text-sm sm:text-base">Features</h4>
+              <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
                 <li class="flex items-center gap-2">
                   <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -249,8 +255,8 @@ import Layout from '../layouts/Layout.astro';
             </div>
             
             <div>
-              <h4 class="font-semibold text-sky-300 mb-3">Benefits</h4>
-              <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+              <h4 class="font-semibold text-sky-300 mb-3 text-sm sm:text-base">Benefits</h4>
+              <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
                 <li class="flex items-center gap-2">
                   <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -295,14 +301,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div>
         <h3 class="text-2xl font-semibold mb-3 text-slate-50">Tech & Coding Partnership Program</h3>
-        <p class="text-slate-300/80">We partner with schools to deliver hands‑on coding and digital skills that prepare students for the future — aligned with the Nigerian curriculum and global standards.</p>
+        <p class="text-slate-300/80 text-left sm:text-left">We partner with schools to deliver hands‑on coding and digital skills that prepare students for the future — aligned with the Nigerian curriculum and global standards.</p>
       </div>
     </div>
 
     <div class="grid gap-6 sm:grid-cols-2">
       <div>
         <h4 class="font-semibold text-indigo-300 mb-3">Program Highlights</h4>
-        <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+        <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
           <li class="flex items-center gap-2">
             <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
             Beginner to advanced tracks (Web, Python, AI/ML)
@@ -319,7 +325,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div>
         <h4 class="font-semibold text-indigo-300 mb-3">Delivery Options</h4>
-        <ul class="flex flex-col items-stretch text-sm text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
+        <ul class="flex flex-col items-stretch text-base md:text-lg text-slate-300/80 text-left divide-y divide-slate-700/60 sm:divide-y-0 [&>li]:flex [&>li]:items-start [&>li]:gap-2 [&>li]:py-2 sm:[&>li]:py-0 [&>li>svg]:w-4 [&>li>svg]:h-4 [&>li>svg]:flex-none">
           <li class="flex items-center gap-2">
             <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
             In‑school weekly sessions

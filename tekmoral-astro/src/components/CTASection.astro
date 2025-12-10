@@ -20,8 +20,8 @@ const {
 } = Astro.props;
 ---
 
-<section class={`${variant === 'compact' ? 'max-w-4xl' : 'max-w-6xl'} mx-auto px-6 text-center`}>
-  <div class="bg-gradient-to-r from-emerald-900/50 to-sky-900/50 rounded-2xl p-8 border border-emerald-700/50">
+<section class={`${variant === 'compact' ? 'max-w-4xl' : 'max-w-6xl'} mx-auto px-0 sm:px-6 text-center`}>
+  <div class="bg-gradient-to-r from-emerald-900/50 to-sky-900/50 rounded-2xl p-6 sm:p-8 border border-emerald-700/50">
     <h2 class="text-3xl md:text-4xl font-semibold mb-6">{title}</h2>
     <p class="text-slate-300/90 text-lg mb-8 max-w-2xl mx-auto">
       {description}
